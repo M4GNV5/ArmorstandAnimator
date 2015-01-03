@@ -2,6 +2,7 @@
 using ArmorstandAnimator.GUI.XAML.Converters;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,15 @@ namespace ArmorstandAnimator.GUI
 			animation.AddKeyframes(keyframes);
 
 			InitializeComponent();
+		}
+
+		private void menuItemChilds(object sender, MouseButtonEventArgs e)
+		{
+			if (sender is MenuItem)
+			{
+				(sender as MenuItem).IsSubmenuOpen = true;
+				e.Handled = true;
+			}
 		}
 	}
 }

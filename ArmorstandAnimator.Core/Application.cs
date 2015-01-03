@@ -10,9 +10,9 @@ namespace ArmorstandAnimator.Core
 	{
 		public static event EventHandler<IExporter> OnAddExporter;
 
-		public void AddExporter(IExporter exporter)
+		public static void AddExporter(IExporter exporter)
 		{
-			OnAddExporter(this, exporter);
+			OnAddExporter(null, exporter);
 		}
 	}
 }

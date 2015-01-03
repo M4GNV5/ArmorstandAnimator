@@ -7,11 +7,15 @@ using System.Threading.Tasks;
 
 namespace ArmorstandAnimator.Exporter.World
 {
-	public class Exporter : IPlugin
+	public class Exporter : IExporter
 	{
-		public string Name { get { return "Minecraft 1.8 World Exporter"; } }
+		public string Name { get { return "1.8 World Exporter"; } }
 
-		public void Load()
+		public bool IsDirectory { get { return true; } }
+
+		public string FileExtension { get { return ""; } }
+
+		public void Export(string path, AnimationManager manager)
 		{
 		}
 	}

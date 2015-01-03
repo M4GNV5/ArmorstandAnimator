@@ -7,6 +7,8 @@ namespace ArmorstandAnimator.Core
 {
 	public interface IExporter
 	{
+		string Name { get; }
+
 		bool IsDirectory { get; }
 
 		string FileExtension { get; }
